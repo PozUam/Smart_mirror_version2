@@ -48,7 +48,7 @@
 							<header class="align-center">
 								<h2>Wstępne przygotowania do samodzielnego wykonania Smart Mirror</h2>
 							</header>
-							<p>Zanim jeszcze przystąpimy do jakichkolwiek działań związanych z konfiguracją urządzenia, systemu i samego oprogramowania SmartMirror.pl koniecznym będzie przygotowanie podstawowych komponentów niezbędnych do uruchomienia urządzenia Raspberry Pi:
+							<p>Zanim jeszcze przystąpimy do jakichkolwiek działań związanych z konfiguracją urządzenia, systemu i samego oprogramowania Smart Mirror.pl koniecznym będzie przygotowanie podstawowych komponentów niezbędnych do uruchomienia urządzenia Raspberry Pi:
 							<ul>
 								<li>Raspberry Pi - model nie ma dużego znaczenia (my bazowaliśmy na Rasp Pi model A), jednak w przypadku zakupu lepiej jest szukać nowszych modeli z większą mocą i wbudowanym modułem WiFi</li>
 								<li>Monitor - nawet najprostsze modele spełnią swoją rolę, ale preferowanym jest monitor ze złączem HDMI oraz USB. W przeciwnym wypadku będzie trzeba posiłkować się przejściówkami</li>
@@ -57,8 +57,8 @@
 								<li>Czytnik kart pamięci podłączony do komputera - będzie niezbędny aby zainstalować system na karcie pamięci</li>
 							</ul></p>
 							<p>Powyższe komponenty są absolutnym minimum potrzebnym do rozpoczęcia działania z urządzeniem Raspberry Pi. Dodatkowymi produktami, które przydadzą się, ale nie będą na stałe używane z urządzeniem Raspberry Pi to: kabel RJ-45 i mysz USB, których role bardziej szczegółowo opisane są w poniższych częściach poradnika.</p>
-							
-
+							<br />
+							<br />
 							<header class="align-center">
 								<h2>Pobranie, instalacja oraz wstępna konfiguracja systemu Raspbian.</h2>
 								<p>Poradnik został podzielony na kilka części, aby całość była bardziej przejrzysta i łatwiejsza do zrozumienia.</p>
@@ -73,31 +73,32 @@
 									<li>System operacyjny Raspbian</li>
 									<li>Oprogramowanie do instalacji Raspbiana na karcie pamięci - Etcher</li>
 								</ul></p>
-								<p>Aby móc uruchomić oprogramowanie SmartMirror na Raspberry Pi trzeba najpierw mieć system operacyjny. Tym systemem będzie Raspbian.</p>
+								
 							</header>
+							<p>Aby móc uruchomić oprogramowanie Smart Mirror na Raspberry Pi trzeba najpierw mieć system operacyjny. Tym systemem będzie Raspbian.</p><br />
 							<p>
 							<ol>
 								<li>Pobieramy aktualną wersję Raspbiana ze strony: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="new">https://www.raspberrypi.org/downloads/raspbian/</a> (w chwili publikacji był to Raspbian Stretch)</li><br />
-								<img src="images/konfiguracja/1.1.jpg" alt="" width="800"/><br />
+								<img src="images/konfiguracja/1.1.jpg" alt="" width="800"/><br /><br />
 								<li>Pobieramy Etcher ze strony: <a href="https://etcher.io/" target="new">https://etcher.io/</a>. Spośród wielu wersji wybieramy wersję Portable, ze względu na to, że nie wymaga instalacji. Architekturę użytkownik dobiera odpowiednio do swojego systemu operacyjnego Windows/Linux.</li><br />
-								<img src="images/konfiguracja/1.2.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.2.jpg" alt="" width="640"/><br /><br />
 								<li>Po rozpakowaniu pliku *.zip z obrazem systemu wszystkie potrzebne do instalacje na karcie pamięci programy powinny prezentować się tak jak na zdjęciu.</li><br />
-								<img src="images/konfiguracja/1.3.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.3.jpg" alt="" width="640"/><br /><br />
 								<li>Uruchamiamy Etcher, pojawi się następujące okno.</li><br />
-								<img src="images/konfiguracja/1.4.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.4.jpg" alt="" width="640"/><br /><br />
 								<li>Klikamy „Select image” i wybieramy obraz systemu.</li><br />
-								<img src="images/konfiguracja/1.5.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.5.jpg" alt="" width="640"/><br /><br />
 								<li>Upewniamy się, że została wybrana odpowiednia karta pamięci klikając „Change”. Jest to istotne, ponieważ po kliknięciu „Flash!” karta zostanie wyczyszczona.</li><br />
-								<img src="images/konfiguracja/1.6.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.6.jpg" alt="" width="640"/><br /><br />
 								<li>Jeśli wszystko jest w porządku, klikamy „Flash!”, pozwalamy na wprowadzanie zmian na tym urządzeniu i czekamy, aż obraz zostanie zainstalowany na karcie pamięci.</li><br />
 								<img src="images/konfiguracja/1.7.jpg" alt="" width="640"/><br />
-								<img src="images/konfiguracja/1.8.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/1.8.jpg" alt="" width="640"/><br /><br />
 								<li>Gdy instalacja zostanie zakończona powodzeniem, Etcher wyświetli odpowiedni komunikat.</li><br />
 								<img src="images/konfiguracja/1.10.jpg" alt="" width="640"/>
 							</p>
 							<p>Po wykonaniu tych kroków mamy zainstalowany system Raspbian na naszej karcie pamięci.</p>
-							
-							
+							<br />
+							<br />
 							<header class="align-center">
 								<h2>Wstępna konfiguracja systemu Raspbian na urządzeniu Raspberry Pi.</h2>
 								<p>Potrzebne będą:
@@ -110,49 +111,52 @@
 									<li>Kabel sieciowy</li>
 								</ul>
 								</p>
-								<p>Do wcześniejszych prac paradoksalnie urządzenie Raspberry Pi nie było nam potrzebne, ale przygotowany uprzednio obraz trzeba na czymś uruchomić :)</p>
-								<p>Po włożeniu do „Raspa” karty pamięci z systemem, podpinamy kabel sygnałowy do złącza HDMI, kabel zasilający do złącza Micro USB, kabel sieciowy do złącza RJ-45. Teraz możemy przejść przez wstępną konfigurację, która umożliwi nam zdalny dostęp do systemu poprzez VNC, pozwoli zmienić standardowe hasło na własne oraz zmienimy język systemu i ustawimy poprawną strefę czasową. </p>
+								<p>Do wcześniejszych prac paradoksalnie urządzenie Raspberry Pi nie było nam potrzebne, ale przygotowany uprzednio obraz trzeba na czymś uruchomić :)<br />
+								Po włożeniu do „Raspa” karty pamięci z systemem, podpinamy kabel sygnałowy do złącza HDMI, kabel zasilający do złącza Micro USB, kabel sieciowy do złącza RJ-45. Teraz możemy przejść przez wstępną konfigurację, która umożliwi nam zdalny dostęp do systemu poprzez VNC, pozwoli zmienić standardowe hasło na własne oraz zmienimy język systemu i ustawimy poprawną strefę czasową. </p>
 							</header>
+							<p>Zacznimy od konfiguracji serwera VNC</p>
 							<p><ol>
 								<li>Po włożeniu karty pamięci do „Raspa” możemy podpiąć mysz USB, kabel sygnałowy oraz zasilający. Raspberry będzie potrzebowało chwilę na załadowanie systemu. Po załadowaniu pojawi nam się pulpit Raspbiana. <br />Możemy od razu przejść do konfiguracji zdalnego dostępu. W tym celu (jeszcze korzystając z myszki) klikamy na ikonkę malinki, wybieramy „Preferences”, a następnie „Raspberry Pi Configuration”.</li><br />
-								<img src="images/konfiguracja/2.1.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.1.jpg" alt="" width="640"/><br /><br />
 								<li>Pojawi nam się okienko, przechodzimy do zakładki „Interfaces” i zaznaczamy „VNC” jako „Enabled”.</li><br />
-								<img src="images/konfiguracja/2.2.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.2.jpg" alt="" width="640"/><br /><br />
 								<li>Klikamy „OK” i na górnym pasku po prawej stronie powinna pojawić się ikonka informująca o tym, że serwer VNC jest aktywny. Klikamy dwukrotnie na tą ikonkę i ukaże nam się okno z widocznym adresem IP, który będzie potrzebny do połączenia zdalnego.</li>
-								<img src="images/konfiguracja/2.3.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.3.jpg" alt="" width="640"/><br /><br />
 								<li>Przechodzimy do strony: https://www.realvnc.com/en/connect/download/viewer/ i ściągamy program VNC Viewer, który również jest dostępny w wersji niewymagającej instalacji (w tym wypadku Standalone EXE). Wybieramy odpowiednią architekturę i ściągamy aplikację.</li><br />
-								<img src="images/konfiguracja/2.4.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.4.jpg" alt="" width="640"/><br /><br />
 								<li>Po ściągnięciu aplikacji uruchamiamy ją. Wyświetli nam się okno programu, na górze wpisujemy adres IP (w tym wypadku 192.168.0.16) i wciskamy „Enter”. </li><br />
-								<img src="images/konfiguracja/2.5.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.5.jpg" alt="" width="640"/><br /><br />
 								<li>Pojawi nam się informacja o tym, że jest to pierwsze połączenie z tym adresem. Klikamy „Continue”.</li><br />
-								<img src="images/konfiguracja/2.6.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/2.6.jpg" alt="" width="640"/><br /><br />
 								<li>Pojawi nam się prośba o nazwę użytkownika i hasło. Standardowo jest to <b>Username: pi Password: raspberry</b>. W dalszej części poradnika będziemy to zmieniać. </li><br />
 								<img src="images/konfiguracja/2.7.jpg" alt="" width="640"/><br />
 							</ol>
-							<p><br />
+							<p>
+							<br />
 						
 							<p>Teraz zmienimy hasło dostępowe.<br />
 							<ol>
 								<li>W tym celu ponownie otwieramy menu "malinki", wybieramy „Preferences”, następnie „Raspberry Pi Configuration”.</li><br />
-								<img src="images/konfiguracja/3.1.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/3.1.jpg" alt="" width="640"/><br /><br />
 								<li>W zakładce „System” klikamy na przycisk „Change Password” i wpisujemy nowe (najlepiej skomplikowane) hasło. </li><br />
-								<img src="images/konfiguracja/3.2.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/3.2.jpg" alt="" width="640"/><br /><br />
 							</ol>
-							</p><br />
+							</p>
+							<br />
 							
 							<p>Ostatecznie zmieniamy język i strefę czasową.<br />
 							<ol>
 								<li>Przechodzimy do zakładki „Localisation” i klikamy „Set Locale”. Uzupełniamy pola tak jak na zrzucie poniżej.</li><br />
-								<img src="images/konfiguracja/3.3.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/3.3.jpg" alt="" width="640"/><br /><br />
 								<li>Następnie wybieramy „Set Timezone” i również uzupełniamy według wzoru poniżej.</li><br />
-								<img src="images/konfiguracja/3.4.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/3.4.jpg" alt="" width="640"/><br /><br />
 								<li>Po tych krokach zgadamy się na ponowne uruchomienie systemu. </li><br />
 								<img src="images/konfiguracja/3.5.jpg" alt="" width="640"/><br />
 							</ol>
 							</p>
 							
 							<header class="align-center">
-								<h2>Konfiguracja opcjonalnej karty sieciowej WiFi USB. <b>Tą część poradnika mogą pominąć posiadacze nowszych modeli Raspberry Pi, które posiadają wbudowany moduł WiFi.</b></h2>
+								<h2>Konfiguracja opcjonalnej karty sieciowej WiFi USB. <i>Tą część poradnika mogą pominąć posiadacze nowszych modeli Raspberry Pi, które posiadają wbudowany moduł WiFi.</i></h2>
 								<p>Potrzebne będą:
 								<ul>
 									<li>Raspberry Pi podpięte do monitora, sieci i zasilania</li>
@@ -168,31 +172,32 @@
 								<img src="images/konfiguracja/4.2.jpg" alt="" width="640"/><br />
 								<li>Kartę sieciową można zweryfikować po nazwie producenta, lub samego produktu.</li><br />
 								<img src="images/konfiguracja/4.3.jpg" alt="" width="640"/><br />
-								<li>Gdy nasza karta sieciowa będzie widoczna może wpisać kolejne polecenie: <b>sudo nano /etc/network/interface</b> służy ono do edytowania pliku, który zawiera informacje o interfejsach sieciowych. </li><br />
+								<li>Gdy nasza karta sieciowa będzie widoczna może wpisać kolejne polecenie: <b>sudo nano /etc/network/interfaces</b> służy ono do edytowania pliku, który zawiera informacje o interfejsach sieciowych. </li><br />
 								<img src="images/konfiguracja/4.4.jpg" alt="" width="640"/><br />
-								<b>sudo</> służy do wykonania polecenia z prawami roota (Linuxowy administrator), <b>nano</b> jest edytorem tekstu wbudowanym w system, który pozwoli nam edytować zawartość pliku <b>interfaces</b> znajdującego się w ścieżce <b>/etc/network</b><br />
+								<b>sudo<b/> służy do wykonania polecenia z prawami roota (Linuxowy administrator), <b>nano</b> jest edytorem tekstu wbudowanym w system, który pozwoli nam edytować zawartość pliku <b>interfaces</b> znajdującego się w ścieżce <b>/etc/network</b><br />
 								<li>Po kliknięciu „Enter” pojawi nam się okno edytora. Wklejamy do niego poniższy tekst.<br />
-									<code>auto lo
-									iface lo inet loopback
-									iface eth0 inet dhcp
-
-									allow-hotplug wlan0
-									auto wlan0
-
-									iface wlan0 inet dhcp
-									wpa-ssid "nazwa_sieci"
-									wpa-psk "haslo_do_sieci"</code></li><br />
-								<img src="images/konfiguracja/4.6.jpg" alt="" width="640"/><br />
+									<code>auto lo<br />
+									iface lo inet loopback<br />
+									iface eth0 inet dhcp<br />
+									<br />
+									allow-hotplug wlan0<br />
+									auto wlan0<br />
+									<br />
+									iface wlan0 inet dhcp<br />
+									&nbsp;wpa-ssid "nazwa_sieci"<br />
+									&nbsp;wpa-psk "haslo_do_sieci"</code></li><br />
+								<img src="images/konfiguracja/4.6.jpg" alt="" width="640"/><br /><br />
 								<li>Po wklejeniu tekstu możemy zapisać plik klikając na klawiaturze kombinację <b>„ctrl+o”</b>, potwierdzamy „Enter”.</li><br />
-								<img src="images/konfiguracja/4.7.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/4.7.jpg" alt="" width="640"/><br /><br />
 								<li>Wracamy z powrotem do okna terminala kombinacją klawiszy <b>„ctrl+x”</b>. Ostatnim krokiem jest restart interfejsów sieciowych poleceniem: <b>sudo service networking reload</b>.</li><br />
-								<img src="images/konfiguracja/4.8.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/4.8.jpg" alt="" width="640"/><br /><br />
 								<li>Teraz możemy uruchomić ponownie urządzenie klikając na ikonę malinki i wybierając „Shutdown”, a następnie „Reboot”. </li><br />
-								<img src="images/konfiguracja/4.9.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/4.9.jpg" alt="" width="640"/><br /><br />
 								<li>Po odpięciu kabla sieciowego Raspberry powinno automatycznie połączyć się z siecią WiFi. Możliwe, że po restarcie interfejsów sieciowych zmieni się adres IP. Aby sprawdzić jaki jest nowy adres, będziemy musieli ponownie skorzystać z myszki USB. Sam adres sprawdzimy po otwarciu panelu serwera VNC.</li><br />
-								<img src="images/konfiguracja/4.10.jpg" alt="" width="640"/><br />
+								<img src="images/konfiguracja/4.10.jpg" alt="" width="640"/><br /><br />
 							</ol>
 							</p>
+							<p>W tym momencie mamy przeprowadzoną konfigurację Raspberry Pi. Następnymi krokami będzie przygotowanie bibliotek, aby aplikacja Smart Mirror działała poprawnie.</p>
 							<!--<p><span class="image right"><img src="images/pic02.jpg" alt="" /></span></p>-->
 						</div>
 					</div>
